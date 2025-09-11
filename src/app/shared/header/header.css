@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin-top: 25px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 98.42%;
+    height: 4.0625rem;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+   
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+
+}
+.search {
+    display: flex;
+    align-items: center;
+   
+}
+.search input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.search button {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search img {
+    width: 19.494px;
+height: 18.006px;
+}
+
+
+.icons>div {
+    margin-left: 20px;
+}
+
+.fa {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.heart {
+    width: 25px;
+    height: 22.5px;
+}
+
+.user {
+    width: 17.5px;
+    height: 23.75px;
+}
+
+.bag {
+    width: 22.955px;
+    height: 26.25px;
+}

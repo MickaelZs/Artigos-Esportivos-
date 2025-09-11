@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 83%;
+    height: 83vh;
+    background: url('../../../assets/images/Rectangle\ 1.jpg') no-repeat center center/cover;
+    border-radius: 20px;
+
+}
