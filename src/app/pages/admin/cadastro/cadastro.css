@@ -1,6 +1,10 @@
-.containerr{
+*{
+    border: 1px solid red;
+}
+
+.container{
     display: flex;
     justify-content: center;
-    align-content: center;
     align-items: center;
+   
 }
