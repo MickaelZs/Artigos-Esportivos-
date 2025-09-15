@@ -1,0 +1,31 @@
+*{
+    border: 1px solid red;
+}
+
+.sidebar {
+  width: 81px;
+  height: 314px;
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    background: none;
+}
+
+.icon img {
+  width: 28px;
+  height: 28px;
+  padding: 10px;
+  background: none;
+}
+
+.icon:hover{
+  background-color: #017BFF;
+  border-radius: 20%;
+}
