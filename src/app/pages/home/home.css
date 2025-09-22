@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 1px solid red;
-}
+
 
 section {
     display: flex;
@@ -11,13 +7,42 @@ section {
     margin-top: 30px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+}
+
+.faixa{
+    margin: 0;
+    padding: 0;
+    height: 5vh;
+    margin-top: 0;
+    background-color: #017BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faixa p{
+    color: white;
+    font-size: 16px;
+    font-weight: medium;
+}
+
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 83%;
+    width: 82%;
     height: 83vh;
-    background: url('../../../assets/images/Rectangle\ 1.jpg') no-repeat center center/cover;
+    background: url('../../../assets/images/skier.jpg') no-repeat center center/cover;
     border-radius: 20px;
 
 }

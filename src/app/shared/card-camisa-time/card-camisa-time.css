@@ -1,0 +1,68 @@
+.container-card {
+    display: flex;
+    background-image: url('../../../assets/images/image\ 13.jpg');
+    border-radius: 15px;
+    width: 1174px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    min-height: 450px;
+    position: relative;
+}
+
+.conteudo-card {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    max-width: 55%;
+    z-index: 1; 
+}
+
+.conteudo-card h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.conteudo-card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+.conteudo-card button {
+    background-color: white;
+    color: #1a73e8;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: fit-content;
+}
+
+.conteudo-card button:hover {
+    background-color: #e0e0e0;
+}
+
+.imagem-card {
+    position: absolute; 
+    top: -85px; 
+    right: 0; 
+    width: 45%; 
+    height: 118.9%; 
+    background-image: url('../../../assets/images/pedro.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center top; 
+    z-index: 0; 
+}
+

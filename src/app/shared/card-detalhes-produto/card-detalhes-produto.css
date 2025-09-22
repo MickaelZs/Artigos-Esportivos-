@@ -1,6 +1,4 @@
-/* *{
-    border: solid 1px red;
-} */
+
 
 main {
     display: flex;
@@ -51,6 +49,7 @@ main {
     border: 2px solid transparent;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    background-size: cover;
 }
 
 .miniatura.ativa,
