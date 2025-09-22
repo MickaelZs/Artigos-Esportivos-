@@ -3,6 +3,7 @@ import { Home } from './pages/home/home';
 import { Login } from './pages/login/login';
 import { Cadastro } from './pages/admin/cadastro/cadastro';
 import { Lista } from './pages/admin/lista/lista';
+import { DetalhesProdutos } from './pages/detalhes-produtos/detalhes-produtos';
 
 export const routes: Routes = [
     {
@@ -14,6 +15,13 @@ export const routes: Routes = [
         path: 'login',
         component: Login,
         title: 'Login'
+    },
+
+    {
+        path: 'detalhes-produtos',
+        component: DetalhesProdutos,
+        title: 'Detalhes do Produto'
+
     },
 
     {

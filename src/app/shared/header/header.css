@@ -1,9 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 1px solid red;
-}
+
 
 header {
     display: flex;
@@ -11,6 +6,7 @@ header {
     align-items: center;
     font-family: Arial, sans-serif;
     margin-top: 25px;
+
 }
 
 .navbar {
@@ -22,14 +18,14 @@ header {
     height: 4.0625rem;
     flex-shrink: 0;
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
     border-radius: 10px;
+    box-shadow: 0 0 15px #0e0d0d0d;
    
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: bold;
+    height: 60px;
+    width: 60px;
     color: #333;
 }
 
