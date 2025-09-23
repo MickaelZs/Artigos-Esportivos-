@@ -69,8 +69,8 @@ nav ul li a {
 }
 
 .search img {
-    width: 19.494px;
-height: 18.006px;
+     width: 22.955px;
+    height: 26.25px;
 }
 
 
@@ -84,6 +84,7 @@ height: 18.006px;
     cursor: pointer;
 }
 
+
 .heart {
     width: 25px;
     height: 22.5px;
@@ -95,6 +96,7 @@ height: 18.006px;
 }
 
 .bag {
+    margin: 20px;
     width: 22.955px;
     height: 26.25px;
 }

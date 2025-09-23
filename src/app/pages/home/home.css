@@ -1,4 +1,6 @@
-
+.home-container{
+    height: 110vh;
+}
 
 section {
     display: flex;
