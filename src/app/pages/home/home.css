@@ -1,5 +1,6 @@
 .home-container{
-    height: 110vh;
+    height: 100vh;
+    border: solid 1px red;
 }
 
 section {
@@ -42,11 +43,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 82%;
-    height: 83vh;
+    width: 83%;
+    height: 75vh;
     background: url('../../../assets/images/skier.jpg') no-repeat center center/cover;
     border-radius: 20px;
 
+}
+
+.container-produtos{
+    height: 100vh;
 }
 
 .card-categorias{
@@ -73,6 +78,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    height: 110vh;
 }
 
 .section-title{

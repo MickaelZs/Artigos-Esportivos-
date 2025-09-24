@@ -1,7 +1,7 @@
 .container {
   display: flex;
   align-items: center;
-  gap: 16px; /* Espaçamento entre a caixa de busca e o botão */
+  gap: 16px; 
   padding: 16px;
 }
 
@@ -10,11 +10,17 @@
   flex: 1;
   align-items: center;
   background-color: #ffffff;
-  border-radius: 9999px; /* Para bordas arredondadas */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 15px; 
+  box-shadow: 0 4px 10px #a0a0a01a;
   padding: 4px 16px;
   height: 48px;
+}
+
+.search-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: #444; 
+  fill: none;
 }
 
 .search-input {
@@ -50,17 +56,17 @@
 }
 
 .add-button {
-  background-color: #007bff; /* Cor do botão azul */
+  background-color: #007bff;
   color: #ffffff;
   font-weight: bold;
   padding: 12px 24px;
-  border-radius: 9999px;
+  border-radius: 15px;
   border: none;
   cursor: pointer;
+  height: 48px;
   font-size: 16px;
-  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  white-space: nowrap; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
