@@ -3,12 +3,9 @@
     background-color: #fff;
     padding: 24px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 1103px;
     height: 512px;
-
-    margin: auto;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 .formulario-produto h2 {

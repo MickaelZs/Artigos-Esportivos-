@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header-admin',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './header-admin.html',
   styleUrl: './header-admin.css'
 })

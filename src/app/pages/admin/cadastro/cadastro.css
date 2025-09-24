@@ -1,8 +1,22 @@
+/* *{
+    border: solid 1px red;
+} */
 
+/* .main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} */
 
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
+   height: 90vh;
    
+}
+
+.comp{
+    padding: 100px;
 }
