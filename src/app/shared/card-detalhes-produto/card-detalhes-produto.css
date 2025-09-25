@@ -6,12 +6,14 @@ main {
     align-items: flex-start;
     padding: 40px 20px;
     font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; 
 }
 
 .container-produto {
     display: flex;
     /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
     max-width: 1200px;
+
 }
 
 .galeria-imagens-produto {

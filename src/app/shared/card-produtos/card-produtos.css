@@ -1,64 +1,91 @@
-
-
-.card-produtos {    
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;
+.product-card-container {
+  font-family: 'Poppins', sans-serif; 
+  width: 300px;
+  background-color: #fff;
+  border-radius: 0 16px 0  16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+a{
+  text-decoration: none;
 }
 
-.card:hover {
+.product-card-container:hover{
   transform: scale(1.03);
 }
 
-.card {
-  background-color: white;
-  border-radius: 10px;
-  width: 270px;
-  height: 380px;
-  border-radius: 0px 20px 0px 20px;
-  overflow: hidden;
-  font-family: 'Arial', sans-serif;
+.product-image-container {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 24px;
 }
 
-.card-image {
+.product-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 0px 20px 0px 0px;
+  height: 239px;
+  display: block;
 }
 
-.card-details {
-  padding: 16px;
-  background: none;
+.favorite-icon-container {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.favorite-icon-container svg {
+  width: 18px;
+  height: 18px;
+  color: #333;
+  stroke: #333;
+  stroke-width: 2px;
+  fill: none;
+  transition: all 0.2s ease;
+}
+
+.favorite-icon-container:hover svg {
+  fill: #ff0000;
+  stroke: #ff0000;
+}
+
+.product-details-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-category {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
 }
 
 .product-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  background: none;
-
-}
-
-.preco {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
   color: #333;
-  margin-bottom: 4px;
-  background: none;
+  margin: 0;
 }
 
-.desc {
+.product-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 16px 0 4px 0;
+}
+
+.product-installments {
   font-size: 14px;
   color: #888;
-  background: none;
+  margin: 0;
 }
-
-.categ {
-  font-size: 14px;
-  color: #666;
-  background: none;
-}
-

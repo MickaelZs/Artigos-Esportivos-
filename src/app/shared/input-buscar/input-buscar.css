@@ -3,6 +3,7 @@
   align-items: center;
   gap: 16px; 
   padding: 16px;
+  font-family: 'Poppins', sans-serif; 
 }
 
 .search-box {
