@@ -59,6 +59,8 @@ nav ul li a {
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 20px;
+    background: none;
+    outline: none;
 }
 
 .search button {
@@ -69,8 +71,9 @@ nav ul li a {
 }
 
 .search img {
-     width: 22.955px;
-    height: 26.25px;
+     width: 20px;
+    height: 20px;
+    margin: 10px;
 }
 
 
@@ -91,12 +94,12 @@ nav ul li a {
 }
 
 .user {
-    width: 17.5px;
-    height: 23.75px;
+    width: 25px;
+    height: 25.5px;
 }
 
 .bag {
-    margin: 20px;
+    margin: 30px;
     width: 22.955px;
     height: 26.25px;
 }

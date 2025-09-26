@@ -24,7 +24,7 @@ export class Login {
 
       if (this.login == 'admin' && this.senha == '123') {
         alert(`Bem-vindo ${this.login} !`)
-        this.router.navigate(['/admin/cadastro'])
+        this.router.navigate(['/admin/home'])
       } else {
         alert(`Dados Inválidos`)
       }

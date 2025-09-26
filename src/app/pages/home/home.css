@@ -13,12 +13,6 @@ section {
     margin-top: 30px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -63,6 +57,15 @@ body {
     align-items: center;
     gap: 20px;
     margin-top: 30px;
+}
+
+.card-beneficio{
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    
 }
 
 .cards-produtos{

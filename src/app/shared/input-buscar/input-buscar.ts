@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-input-buscar',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './input-buscar.html',
   styleUrl: './input-buscar.css'
 })

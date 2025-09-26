@@ -5,6 +5,8 @@ import { Cadastro } from './pages/admin/cadastro/cadastro';
 import { Lista } from './pages/admin/lista/lista';
 import { DetalhesProdutos } from './pages/detalhes-produtos/detalhes-produtos';
 import { CadastroUsuario } from './pages/cadastro-usuario/cadastro-usuario';
+import { Categorias } from './pages/categorias/categorias';
+import { HomeAdmin } from './pages/admin/home-admin/home-admin';
 
 export const routes: Routes = [
     {
@@ -30,6 +32,19 @@ export const routes: Routes = [
         component: DetalhesProdutos,
         title: 'Detalhes do Produto'
 
+    },
+
+    {
+        path: 'categoria',
+        component: Categorias,
+        title: 'Categorias'
+
+    },
+
+    {
+        path: 'admin/home',
+        component: HomeAdmin,
+        title: 'Home'
     },
 
     {

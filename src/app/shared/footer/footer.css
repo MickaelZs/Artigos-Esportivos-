@@ -1,0 +1,26 @@
+.rodape-aplicacao {
+  font-family: 'Poppins', sans-serif; 
+  width: 100%;
+  height: 241px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1889FF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: #555 2px;
+}
+
+
+
+.upwin {
+  width: 174px;
+  height: 174px;
+
+}
+
+.texto-direitos {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+}

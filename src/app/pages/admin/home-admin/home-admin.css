@@ -1,0 +1,41 @@
+/* *{
+    border: solid 1px red;
+} */
+
+/* .main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 91vh;
+   font-family: 'Poppins', sans-serif; 
+   
+}
+
+.comp{
+    padding: 100px;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    color: #1889FF;
+}
+
+.conteudo {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 1103px;
+    height: 512px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
