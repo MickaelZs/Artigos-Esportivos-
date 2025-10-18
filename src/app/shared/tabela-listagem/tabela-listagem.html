@@ -1,13 +1,13 @@
- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 <div class="formulario-produto">
     <h2>Produtos cadastrados</h2>
 
     <div class="conteudo-formulario">
 
-         <div class="conteudo">
+        <div class="conteudo">
             <table>
                 <thead>
                     <tr>
@@ -16,18 +16,16 @@
                         <th>CATEGORIA</th>
                         <th>COR</th>
                         <th>PRECO</th>
-                        <th>DISPONIVEL</th>                        
+                        <th>DISPONIVEL</th>
                     </tr>
                 </thead>
                 <tbody>
-
-                    @for (produto of listaProdutos; track produto.id){
-                    <tr>
-                        <td>{{produto.id}}</td>
-                        <td>{{produto.nome}}</td>
-                        <td>{{produto.categoria}}</td>
-                        <td>{{produto.id}}</td>
-                        <td>{{produto.valor}}</td>
+                    <tr *ngFor="let produto of listaProdutos; trackBy: trackById">
+                        <td>{{ produto.id }}</td>
+                        <td>{{ produto.nome }}</td>
+                        <td>{{ produto.categoria }}</td>
+                        <td>—</td>
+                        <td>{{ produto.valor }}</td>
                         <td>Sim</td>
                         <td>
                             <img src="../../../assets/images/remove.png" alt="editar" />
@@ -35,10 +33,8 @@
                             <img src="../../../assets/images/edit.png" alt="remover" />
                         </td>
                     </tr>
-                    } 
-
-                    </tbody>
+                </tbody>
             </table>
-        </div>  
+        </div>
+    </div>
 </div>
-

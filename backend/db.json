@@ -77,6 +77,12 @@
       "nome": "aq",
       "valor": 2,
       "categoria": "corridad"
+    },
+    {
+      "id": "cd30",
+      "nome": "Teste",
+      "valor": 100,
+      "categoria": "Teste"
     }
   ]
 }
