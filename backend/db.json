@@ -2,87 +2,10 @@
   "produtos": [
     {
       "id": "1",
-      "nome": "camiseta",
-      "categoria": "roupa",
-      "valor": "10"
-    },
-    {
-      "id": "2",
-      "nome": "tenis",
-      "categoria": "corida",
-      "valor": "20"
-    },
-    {
-      "id": "707e",
-      "nome": "a",
-      "categoria": "s",
-      "valor": 1
-    },
-    {
-      "id": "ec77",
-      "nome": "tenis",
-      "categoria": "corrida",
-      "valor": 30
-    },
-    {
-      "id": "d5ef",
-      "nome": "aq",
-      "valor": 2,
-      "categoria": "corrida"
-    },
-    {
-      "id": "4d3a",
-      "nome": "aq",
-      "valor": 2,
-      "categoria": "corridad"
-    },
-    {
-      "id": "de3a",
-      "nome": "aq",
-      "valor": 2,
-      "categoria": "corridad"
-    },
-    {
-      "id": "12a3",
-      "nome": "aq",
-      "valor": 2,
-      "categoria": "corridad"
-    },
-    {
-      "id": "7c4a",
-      "nome": "aq",
-      "valor": 2,
-      "categoria": "corridad"
-    },
-    {
-      "id": "d984",
-      "nome": "aq",
-      "valor": 2,
-      "categoria": "corridad"
-    },
-    {
-      "id": "1377",
-      "nome": "aq",
-      "valor": 2,
-      "categoria": "corridad"
-    },
-    {
-      "id": "2692",
-      "nome": "aq",
-      "valor": 2,
-      "categoria": "corridad"
-    },
-    {
-      "id": "a18f",
-      "nome": "aq",
-      "valor": 2,
-      "categoria": "corridad"
-    },
-    {
-      "id": "cd30",
       "nome": "Teste",
       "valor": 100,
       "categoria": "Teste"
     }
+    
   ]
 }

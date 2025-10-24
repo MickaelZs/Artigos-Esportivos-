@@ -27,10 +27,11 @@
                         <td>—</td>
                         <td>{{ produto.valor }}</td>
                         <td>Sim</td>
+                       
                         <td>
-                            <img src="../../../assets/images/remove.png" alt="editar" />
+                            <img (click)="excluir(produto.id!)"  src="../../../assets/images/remove.png" alt="remover" />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <img src="../../../assets/images/edit.png" alt="remover" />
+                            <img [routerLink]="['admin/cadastro', produto.id]"  src="../../../assets/images/edit.png" alt="remover" />
                         </td>
                     </tr>
                 </tbody>

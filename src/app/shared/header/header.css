@@ -1,105 +1,90 @@
-
-
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    margin-top: 25px;
-    font-family: 'Poppins', sans-serif; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 82%;
-    height: 4.0625rem;
-    flex-shrink: 0;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #0e0d0d0d;
-   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 82%;
+  height: 4.0625rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0e0d0d0d;
 }
 
 .logo {
-    height: 60px;
-    width: 60px;
-    color: #333;
+  width: 60px;
+  height: 60px;
+  stroke: #333;
+  transition: transform 0.3s ease, stroke 0.3s ease;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
+.logo:hover {
+  transform: scale(1.1);
+  stroke: #007bff;
 }
 
 .icons {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
 
-}
 .search {
-    display: flex;
-    align-items: center;
-   
+  display: flex;
+  align-items: center;
 }
+
 .search input {
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    background: none;
-    outline: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: none;
+  outline: none;
 }
 
 .search button {
-    background-color: transparent;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
 }
 
-.search img {
-     width: 20px;
-    height: 20px;
-    margin: 10px;
+.icons > a,
+.icons > div {
+  margin-left: 20px;
 }
 
-
-.icons>div {
-    margin-left: 20px;
+svg {
+  width: 24px;
+  height: 24px;
+  stroke: #333;
+  transition: stroke 0.3s ease, transform 0.2s ease;
 }
 
-.fa {
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
+svg:hover {
+  stroke: #007bff;
+  transform: scale(1.1);
 }
-
 
 .heart {
-    width: 25px;
-    height: 22.5px;
+  width: 25px;
+  height: 22.5px;
 }
 
 .user {
-    width: 25px;
-    height: 25.5px;
+  width: 25px;
+  height: 25.5px;
 }
 
 .bag {
-    margin: 30px;
-    width: 22.955px;
-    height: 26.25px;
+  width: 22.955px;
+  height: 26.25px;
+  margin: 0 10px;
 }

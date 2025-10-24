@@ -20,4 +20,13 @@ export class ProdutosService {
   cadastrar(produto: Produtos): Observable<Produtos> {
     return this.http.post<Produtos>(this.API, produto);
   }
+
+  editar(produto: Produtos): Observable<Produtos> {
+    const url = `${this.API}/${produto.id}`
+    return this.http.put<Produtos>(url, produto)
+  }
+
+   excluir(id: number): Observable<Produtos> {
+    return this.http.delete<Produtos>(this.API + `/${id}`);
+  }
 }

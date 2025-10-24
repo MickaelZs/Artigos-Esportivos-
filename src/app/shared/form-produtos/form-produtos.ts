@@ -20,7 +20,19 @@ export class FormProdutos {
 
   submeter (){
     this.service.cadastrar(this.produto).subscribe(() => {
+      alert('Produto cadastrado com sucesso!');
     });
   }
+
+    onFileSelected(event: any) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e: any) => {
+          this.produto.imagem = e.target.result; 
+        };
+        reader.readAsDataURL(file);
+      }
+    }  
 
 }

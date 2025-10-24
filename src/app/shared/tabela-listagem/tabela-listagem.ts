@@ -4,13 +4,13 @@ import { Router } from '@angular/router';
 
 import { Produtos } from '../../services/types/type';
 import { CommonModule } from '@angular/common';
-
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tabela-listagem',
   templateUrl: './tabela-listagem.html',
   styleUrls: ['./tabela-listagem.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, RouterLink]
 
 })
 export class TabelaListagemComponent implements OnInit {
@@ -34,4 +34,14 @@ export class TabelaListagemComponent implements OnInit {
   trackById(index: number, produto: Produtos): string {
     return produto.id ? produto.id.toString() : index.toString();
   }
+
+   excluir(id: number) {
+    if (id) {
+      this.service.excluir(id).subscribe(() => {
+        window.location.reload()
+      })
+    }
+  }
+
+
 }

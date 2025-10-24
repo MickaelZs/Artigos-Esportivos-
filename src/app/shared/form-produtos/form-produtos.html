@@ -7,7 +7,7 @@
 
         <div class="grupo-form imagem-upload">
             <label for="imagemProduto" class="caixa-upload">
-                <input type="file" id="imagemProduto" hidden />
+                <input type="file" (change)="onFileSelected($event)" accept="image/*" id="imagemProduto" name="imagem" [(ngModel)]="produto.imagem" required hidden />
                 <span class="icone-upload">⬆</span>
             </label>
         </div>
