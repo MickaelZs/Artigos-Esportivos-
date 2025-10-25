@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Produtos } from '../../services/types/type';
 import { ProdutosService } from '../../services/produtos';
-
+import Toastify from 'toastify-js';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -18,21 +18,27 @@ export class FormProdutos {
 
   constructor(private service: ProdutosService, private router: Router, private route: ActivatedRoute) { }
 
-  submeter (){
+  submeter() {
     this.service.cadastrar(this.produto).subscribe(() => {
-      alert('Produto cadastrado com sucesso!');
+      Toastify({
+        text: "✅ Produto cadastrado com sucesso!",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        className: "toastify-success", 
+      }).showToast();
     });
   }
 
-    onFileSelected(event: any) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (e: any) => {
-          this.produto.imagem = e.target.result; 
-        };
-        reader.readAsDataURL(file);
-      }
-    }  
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.produto.imagem = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
 
 }
