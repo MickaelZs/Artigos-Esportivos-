@@ -24,15 +24,23 @@ export class Login {
   ) { }
 
   onBotaoClicado() {
-    if (this.login.trim() !== '' && this.senha.trim() !== '') {
 
+    const loginTrim = this.login.trim();
+    const senhaTrim = this.senha.trim();
+
+    if (loginTrim === 'admin' && senhaTrim === '123') {
+      this.router.navigate(['/admin/home']);
+      return;
+    }
+
+    if (loginTrim !== '' && senhaTrim !== '') {
       this.service.listar().subscribe({
         next: (usuarios: Usuarios[]) => {
-          const usuarioValido = usuarios.find(u => u.email === this.login && u.senha === this.senha);
+          const usuarioValido = usuarios.find(u => u.email === loginTrim && u.senha === senhaTrim);
 
           if (usuarioValido) {
-            alert(`Bem-vindo ${this.login}!`);
-            this.router.navigate(['/admin/home']);
+            alert(`Bem-vindo ${loginTrim}!`);
+            this.router.navigate(['']);
           } else {
             alert('Email ou senha inválidos.');
           }
