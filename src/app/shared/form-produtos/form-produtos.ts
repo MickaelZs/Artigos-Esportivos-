@@ -15,24 +15,26 @@ export class FormProdutos {
 
   produto: Produtos = {} as Produtos;
 
+  constructor(
+    private service: ProdutosService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
-  constructor(private service: ProdutosService, private router: Router, private route: ActivatedRoute) { }
-
-  submeter (){
+  submeter() {
     this.service.cadastrar(this.produto).subscribe(() => {
       alert('Produto cadastrado com sucesso!');
     });
   }
 
-    onFileSelected(event: any) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (e: any) => {
-          this.produto.imagem = e.target.result; 
-        };
-        reader.readAsDataURL(file);
-      }
-    }  
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.produto.imagem = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
 
 }

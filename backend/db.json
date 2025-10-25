@@ -7,6 +7,17 @@
       "valor": 100,
       "categoria": "Teste"
     }
-    
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "email": "admin",
+      "senha": "123"
+    },
+    {
+      "id": "a048",
+      "email": "Arthur",
+      "senha": "123"
+    }
   ]
 }
