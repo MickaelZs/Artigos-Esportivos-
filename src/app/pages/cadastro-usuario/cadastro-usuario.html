@@ -3,19 +3,9 @@
     <div class="container">
       <div class="secao-imagem">
         <div class="seta-voltar" routerLink="">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
           </svg>
         </div>
         <img src="../../../assets/images/image 5.png" alt="Jogador de tênis se preparando para sacar" />
@@ -25,24 +15,23 @@
         <div class="conteudo">
           <h1>Crie uma conta</h1>
 
-          <form>
+          <form (ngSubmit)="submeter()" #form="ngForm">
             <div class="grupo-input">
               <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Exemplo@email.com" />
+              <input type="email" id="email" name="email" placeholder="Exemplo@email.com" [(ngModel)]="usuario.email"
+                required />
             </div>
 
             <div class="grupo-input">
               <label for="senha">Senha</label>
-              <input type="password" id="senha" placeholder="8 caracteres" />
+              <input type="password" id="senha" name="senha" placeholder="8 caracteres" [(ngModel)]="usuario.senha"
+                required />
             </div>
 
             <div class="grupo-input">
               <label for="confirmar-senha">Confirmar Senha</label>
-              <input
-                type="password"
-                id="confirmar-senha"
-                placeholder="8 caracteres"
-              />
+              <input type="password" id="confirmar-senha" name="confirmarSenha" placeholder="8 caracteres"
+                [(ngModel)]="confirmarSenha" required />
             </div>
 
             <button type="submit" class="botao-primario">Inscreva-se</button>

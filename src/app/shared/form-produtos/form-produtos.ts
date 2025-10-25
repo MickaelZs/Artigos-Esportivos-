@@ -15,8 +15,10 @@ export class FormProdutos {
 
   produto: Produtos = {} as Produtos;
 
-
-  constructor(private service: ProdutosService, private router: Router, private route: ActivatedRoute) { }
+  constructor(
+    private service: ProdutosService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   submeter() {
     this.service.cadastrar(this.produto).subscribe(() => {
