@@ -8,3 +8,14 @@
     /* border: solid 1px #f00707; */
 }
 
+.meu-modal-customizado .mat-dialog-container {
+  width: 400px;
+  max-width: 90vw; 
+  border-radius: 12px;
+}
+
+.cdk-overlay-backdrop.modal-backdrop-blur {
+  background-color: rgba(33, 33, 33, 0.4) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}

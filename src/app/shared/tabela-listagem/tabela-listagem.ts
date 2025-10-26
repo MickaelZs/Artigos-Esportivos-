@@ -5,7 +5,7 @@ import { Modal } from '../modal/modal';
 import { Produtos } from '../../services/types/type';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-tabela-listagem',
@@ -39,7 +39,12 @@ export class TabelaListagemComponent implements OnInit {
 
   excluir(id: number) {
   if (id) {
-    const dialogRef = this.modal.open(Modal);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.backdropClass = 'modal-backdrop-blur'; 
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    const dialogRef = this.modal.open(Modal,dialogConfig);
     
 
     dialogRef.afterClosed().subscribe(result => {
