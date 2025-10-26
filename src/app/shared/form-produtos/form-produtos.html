@@ -1,35 +1,78 @@
 <div class="formulario-produto">
-    <h2>Cadastrar Novo Produto</h2>
+  <h2><span class="barra"></span> Cadastrar Novo Produto</h2>
 
-    <div class="conteudo-formulario">
+  <div class="conteudo-formulario">
+  
+    <div class="imagens-produto">
+      <label class="caixa-upload">
+        <input type="file" accept="image/*" hidden (change)="onFileSelected($event, 1)" />
+        <span class="icone-upload">⬆</span>
+      </label>
 
-        <div class="grupo-form imagem-upload">
-            <label for="imagemProduto" class="caixa-upload">
-                <input type="file" (change)="onFileSelected($event)" accept="image/*" id="imagemProduto" name="imagem"
-                    [(ngModel)]="produto.imagem" required hidden />
-                <span class="icone-upload">⬆</span>
-            </label>
-        </div>
+      <label class="caixa-upload">
+        <input type="file" accept="image/*" hidden (change)="onFileSelected($event, 2)" />
+        <span class="icone-upload">⬆</span>
+      </label>
 
-        <div class="campos-texto">
-            <div class="grupo-form">
-                <label for="nomeProduto">Nome:</label>
-                <input type="text" id="nomeProduto" placeholder="Nome do Produto" [(ngModel)]="produto.nome" />
-            </div>
-
-            <div class="grupo-form">
-                <label for="categoriaProduto">Categorias:</label>
-                <input type="text" id="categoriaProduto" placeholder="Categorias" [(ngModel)]="produto.categoria" />
-            </div>
-        </div>
-
-        <div class="grupo-form campo-preco">
-            <label for="precoProduto">Preço:</label>
-            <input type="number" id="precoProduto" placeholder="Preço do Produto" [(ngModel)]="produto.valor" />
-        </div>
+      <label class="caixa-upload">
+        <input type="file" accept="image/*" hidden (change)="onFileSelected($event, 3)" />
+        <span class="icone-upload">⬆</span>
+      </label>
     </div>
 
-    <div class="rodape-formulario">
-        <button type="submit" class="botao-primario" (click)="submeter()">Salvar</button>
+    <div class="colunas-campos">
+      <div class="coluna">
+        <div class="grupo-form">
+          <label for="nomeProduto">Nome:</label>
+          <input type="text" id="nomeProduto" placeholder="Nome do Produto" [(ngModel)]="produto.nome" required="ops"/>
+        </div>
+
+        <div class="grupo-form">
+          <label for="categoriaProduto">Categoria:</label>
+      
+           <select
+          id="categoriaProduto"
+          [(ngModel)]="produto.categoria"
+        >
+          <option value="Futebol">Futebol</option>
+          <option value="Basquete">Basquete</option>
+        </select>
+        </div>
+
+        <div class="grupo-form">
+          <label for="disponivelProduto">Disponível:</label>
+         
+           <select
+          id="disponivelProduto"
+          [(ngModel)]="produto.disponivel"
+          
+        >
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+        </div>
+      </div>
+
+      <div class="coluna">
+        <div class="grupo-form">
+          <label for="precoProduto">Preço:</label>
+          <input type="number" id="precoProduto" placeholder="Preço do Produto" [(ngModel)]="produto.valor" />
+        </div>
+
+        <div class="grupo-form">
+          <label for="tamanhoProduto">Tamanho:</label>
+          <input type="text" id="tamanhoProduto" placeholder="Tamanho" [(ngModel)]="produto.tamanho" />
+        </div>
+
+        <div class="grupo-form">
+          <label for="corProduto">Cor:</label>
+          <input type="text" id="corProduto" placeholder="Cor do Produto" [(ngModel)]="produto.cor" />
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="rodape-formulario">
+    <button type="submit" class="botao-primario" (click)="submeter()">Salvar</button>
+  </div>
 </div>

@@ -1,5 +1,8 @@
 {
-  "produtos": [],
+  "produtos": [
+    
+      
+  ],
   "usuarios": [
     {
       "id": "1",
@@ -9,11 +12,6 @@
     {
       "id": "a048",
       "email": "Arthur",
-      "senha": "123"
-    },
-    {
-      "id": "c9c8",
-      "email": "mi",
       "senha": "123"
     }
   ]

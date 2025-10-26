@@ -26,9 +26,53 @@ export class FormProdutos {
   ) { }
 
   submeter() {
+    if (
+      !this.produto.nome || !this.produto.categoria || !this.produto.cor || !this.produto.disponivel || !this.produto.valor || !this.produto.tamanho || !this.produto.imagem1 || !this.produto.imagem2 || !this.produto.imagem3
+    ) {
+      Toastify({
+        text: "Campos obrigatórios não preenchidos!",
+        duration: 3000,        
+        close: true,         
+        gravity: "top",        
+        position: "right",     
+        stopOnFocus: true,     
+        style: {
+          fontFamily: "'Poppins', sans-serif",
+          color: "#fff",
+          fontWeight: "400",
+          borderRadius: "10px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.25)",
+          padding: "14px 20px",
+          fontSize: "15px",
+          textTransform: "capitalize",
+          
+        }
+      }).showToast();
+      return;
+    }
     this.service.cadastrar(this.produto).subscribe(() => {
-   
+      Toastify({
+        text: "Produto salvo com sucesso!",
+        duration: 3000,        
+        close: true,           
+        gravity: "top",       
+        position: "right",     
+        stopOnFocus: true,     
+        style: {
+          fontFamily: "'Poppins', sans-serif",
+          background: "linear-gradient(135deg, #21c800ff, #1df700ff)",
+          color: "#fff",
+          fontWeight: "400",
+          borderRadius: "10px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.25)",
+          padding: "14px 20px",
+          fontSize: "15px",
+          textTransform: "capitalize",
+        }
+      }).showToast();
     });
+
+
   }
 
   //  abrirDialog() {
@@ -43,13 +87,31 @@ export class FormProdutos {
   //   });
   // }
 
-  onFileSelected(event: any) {
+  onFileSelected(event: any, index: number) {
     const file = event.target.files[0];
+
     if (file) {
       const reader = new FileReader();
+
       reader.onload = (e: any) => {
-        this.produto.imagem = e.target.result;
+        const imageDataUrl = e.target.result;
+
+        switch (index) {
+          case 1:
+            this.produto.imagem1 = imageDataUrl;
+            break;
+          case 2:
+            this.produto.imagem2 = imageDataUrl;
+            break;
+          case 3:
+            this.produto.imagem3 = imageDataUrl;
+            break;
+          default:
+            console.error('Índice de imagem inválido.');
+        }
+
       };
+
       reader.readAsDataURL(file);
     }
   }

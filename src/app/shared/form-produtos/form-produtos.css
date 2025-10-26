@@ -12,87 +12,122 @@
 }
 
 .formulario-produto h2 {
-    margin-bottom: 24px;
-    color: #333;
+  color: #333;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 30px;
 }
+
+.formulario-produto .barra {
+  width: 4px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
 
 .conteudo-formulario {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
 }
 
-.imagem-upload .caixa-upload {
-    width: 156px;
-    height: 176px;
-    border: 2px dashed #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: #fafafa;
-    border-radius: 6px;
-    transition: border-color 0.3s;
+
+.imagens-produto {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 16px;
+}
+
+.caixa-upload {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
 .caixa-upload:hover {
-    border-color: #007bff;
+  border-color: #007bff;
+  background-color: #f0f8ff;
 }
 
 .icone-upload {
-    font-size: 24px;
-    color: #888;
+  font-size: 24px;
+  color: #888;
 }
 
-.campos-texto {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    flex: 1;
+
+.colunas-campos {
+  display: flex;
+  gap: 60px;
+  flex: 1;
 }
 
-.campo-preco {
-    flex: 1;
-    min-width: 200px;
+.coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .grupo-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .grupo-form label {
-    margin-bottom: 6px;
-    font-weight: 500;
-    color: #555;
+  min-width: 90px;
+  font-weight: 600;
+  color: #333;
+  text-align: right;
 }
 
-.grupo-form input {
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
+.grupo-form input,
+.grupo-form select {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.grupo-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.3);
+  outline: none;
 }
 
 .rodape-formulario {
-    margin-top: 24px;
-    text-align: right;
+  margin-top: 90px;
+  text-align: center;
+  
 }
 
 .botao-primario {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 28px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .botao-primario:hover {
-    background-color: #0056b3;
+  background-color: #0065d1;
 }
-
 

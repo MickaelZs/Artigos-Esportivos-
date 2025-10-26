@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class CardProdutos implements OnInit {
 
+  
+
   listaProdutos: Produtos[] = [];
     constructor(
       private service: ProdutosService,
