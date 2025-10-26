@@ -29,7 +29,7 @@ export const routes: Routes = [
     },
 
     {
-        path: 'detalhes-produtos',
+        path: 'detalhes-produtos/:id',
         component: DetalhesProdutos,
         title: 'Detalhes do Produto'
 

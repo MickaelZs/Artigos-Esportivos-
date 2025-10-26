@@ -29,4 +29,8 @@ export class ProdutosService {
    excluir(id: number): Observable<Produtos> {
     return this.http.delete<Produtos>(this.API + `/${id}`);
   }
+
+  buscarPorId(id: number): Observable<Produtos | undefined> {
+    return this.http.get<Produtos>(this.API + `/${id}`);
+  }
 }

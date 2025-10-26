@@ -1,10 +1,10 @@
 
 
 <div *ngFor="let produto of listaProdutos; trackBy: trackById" class="product-card-container">
-   <a href="" routerLink="detalhes-produtos"> <div class="product-image-container" >
+   <a href="" [routerLink]="['/detalhes-produtos', produto.id]"> <div class="product-image-container" >
     <img
       class="product-image"
-      src={{produto.imagem3}}
+      src={{produto.imagem1}}
       alt="Imagem do tênis"
     />
     <div class="favorite-icon-container">
