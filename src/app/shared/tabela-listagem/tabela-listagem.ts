@@ -1,10 +1,11 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ProdutosService } from '../../services/produtos';
 import { Router } from '@angular/router';
-
+import { Modal } from '../modal/modal';
 import { Produtos } from '../../services/types/type';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-tabela-listagem',
@@ -19,7 +20,8 @@ export class TabelaListagemComponent implements OnInit {
   constructor(
     private service: ProdutosService,
     private router: Router,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private modal: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -35,13 +37,23 @@ export class TabelaListagemComponent implements OnInit {
     return produto.id ? produto.id.toString() : index.toString();
   }
 
-   excluir(id: number) {
-    if (id) {
-      this.service.excluir(id).subscribe(() => {
-        window.location.reload()
-      })
-    }
+  excluir(id: number) {
+  if (id) {
+    const dialogRef = this.modal.open(Modal);
+    
+
+    dialogRef.afterClosed().subscribe(result => {
+      
+      if (result) {
+        this.service.excluir(id).subscribe(() => {
+          window.location.reload();
+        }, () => {
+          
+        });
+      }
+    });
   }
+}
 
 
 }

@@ -4,6 +4,8 @@ import { ProdutosService } from '../../services/produtos';
 import Toastify from 'toastify-js';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { Modal } from '../modal/modal';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-form-produtos',
@@ -18,19 +20,28 @@ export class FormProdutos {
   constructor(
     private service: ProdutosService,
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private modal: MatDialog
+
+  ) { }
 
   submeter() {
     this.service.cadastrar(this.produto).subscribe(() => {
-      Toastify({
-        text: "✅ Produto cadastrado com sucesso!",
-        duration: 3000,
-        gravity: "top",
-        position: "right",
-        className: "toastify-success", 
-      }).showToast();
+   
     });
   }
+
+  //  abrirDialog() {
+  //   const dialogRef = this.modal.open(Modal);
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     if (result) {
+  //       console.log('Confirmado!');
+  //     } else {
+  //       console.log('Cancelado!');
+  //     }
+  //   });
+  // }
 
   onFileSelected(event: any) {
     const file = event.target.files[0];
