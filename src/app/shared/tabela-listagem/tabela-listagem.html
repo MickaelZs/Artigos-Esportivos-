@@ -33,7 +33,7 @@
                         <td>
                             <img (click)="excluir(produto.id!)"  src="../../../assets/images/remove.png" alt="remover" />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <img [routerLink]="['admin/cadastro', produto.id]"  src="../../../assets/images/edit.png" alt="remover" />
+                            <img [routerLink]="['/admin/alterar', produto.id]"  src="../../../assets/images/edit.png" alt="editar" />
                         </td>
                     </tr>
                 </tbody>

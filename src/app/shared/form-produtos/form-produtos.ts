@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Produtos } from '../../services/types/type';
 import { ProdutosService } from '../../services/produtos';
 import Toastify from 'toastify-js';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Modal } from '../modal/modal';
 import { MatDialog } from '@angular/material/dialog';
@@ -16,6 +16,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class FormProdutos {
 
   produto: Produtos = {} as Produtos;
+  produtoId?: number;
 
   constructor(
     private service: ProdutosService,
@@ -23,10 +24,50 @@ export class FormProdutos {
     private route: ActivatedRoute,
     private modal: MatDialog
 
-  ) { }
+  ) { 
+
+    const id = this.route.snapshot.paramMap.get('id');
+    this.produtoId = id ? Number(id) : undefined;
+
+    if(this.produtoId){
+      service.buscarPorId(this.produtoId).subscribe(produto => {
+
+        if(produto){
+           this.produto = produto;
+        }
+      })
+    }
+
+   }
 
   submeter() {
-    if (
+
+    if(this.produtoId){
+      this.service.editar(this.produto).subscribe(() => {
+        Toastify({
+        text: "Produto alterado com sucesso!",
+        duration: 3000,        
+        close: true,           
+        gravity: "top",       
+        position: "right",     
+        stopOnFocus: true,     
+        style: {
+          fontFamily: "'Poppins', sans-serif",
+          background: "linear-gradient(135deg, #21c800ff, #1df700ff)",
+          color: "#fff",
+          fontWeight: "400",
+          borderRadius: "10px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.25)",
+          padding: "14px 20px",
+          fontSize: "15px",
+          textTransform: "capitalize",
+        }
+      }).showToast();
+        
+      } )
+    }
+    else{
+       if (
       !this.produto.nome || !this.produto.categoria || !this.produto.cor || !this.produto.disponivel || !this.produto.valor || !this.produto.tamanho || !this.produto.imagem1 || !this.produto.imagem2 || !this.produto.imagem3
     ) {
       Toastify({
@@ -75,17 +116,10 @@ export class FormProdutos {
 
   }
 
-  //  abrirDialog() {
-  //   const dialogRef = this.modal.open(Modal);
+    }
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     if (result) {
-  //       console.log('Confirmado!');
-  //     } else {
-  //       console.log('Cancelado!');
-  //     }
-  //   });
-  // }
+    
+
 
   onFileSelected(event: any, index: number) {
     const file = event.target.files[0];

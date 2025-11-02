@@ -64,6 +64,12 @@ export const routes: Routes = [
         path: 'admin/lista',
         component: Lista,
         title: 'Lista'
+    },
+
+    {
+        path: 'admin/alterar/:id',
+        component: Cadastro,
+        title: 'Produto Alterar'
     }
 
 ];

@@ -9,7 +9,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-tabela-listagem',
-  templateUrl: './tabela-listagem.html',
+  templateUrl: './tabela-listagem.html', 
   styleUrls: ['./tabela-listagem.css'],
   imports: [CommonModule, RouterLink]
 
