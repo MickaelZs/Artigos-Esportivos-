@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Produtos } from '../../services/types/type';
 import { ProdutosService } from '../../services/produtos';
 import Toastify from 'toastify-js';
@@ -22,18 +22,17 @@ export class FormProdutos {
     private service: ProdutosService,
     private router: Router,
     private route: ActivatedRoute,
-    private modal: MatDialog
+    private modal: MatDialog,
+     private cdr: ChangeDetectorRef
 
   ) { 
 
-    const id = this.route.snapshot.paramMap.get('id');
-    this.produtoId = id ? Number(id) : undefined;
-
-    if(this.produtoId){
+     this.produtoId = Number(this.route.snapshot.params['id']);
+    if (this.produtoId) {
       service.buscarPorId(this.produtoId).subscribe(produto => {
-
-        if(produto){
-           this.produto = produto;
+        if (produto) {
+          this.produto = produto;
+          this.cdr.detectChanges();
         }
       })
     }
