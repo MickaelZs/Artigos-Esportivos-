@@ -24,7 +24,7 @@
       <div class="coluna">
         <div class="grupo-form">
           <label for="nomeProduto">Nome:</label>
-          <input type="text" id="nomeProduto" placeholder="Nome do Produto" [(ngModel)]="produto.nome" required="ops"/>
+          <input type="text" id="nomeProduto" name="nomeProduto" placeholder="Nome do Produto" [(ngModel)]="produto.nome" required="ops"/>
         </div>
 
         <div class="grupo-form">
@@ -32,6 +32,7 @@
       
            <select
           id="categoriaProduto"
+          name="nomeProduto"
           [(ngModel)]="produto.categoria"
         >
           <option value="Futebol">Futebol</option>
@@ -56,17 +57,17 @@
       <div class="coluna">
         <div class="grupo-form">
           <label for="precoProduto">Preço:</label>
-          <input type="number" id="precoProduto" placeholder="Preço do Produto" [(ngModel)]="produto.valor" />
+          <input type="number" id="precoProduto" name="precoProduto" placeholder="Preço do Produto" [(ngModel)]="produto.valor" />
         </div>
 
         <div class="grupo-form">
           <label for="tamanhoProduto">Tamanho:</label>
-          <input type="text" id="tamanhoProduto" placeholder="Tamanho" [(ngModel)]="produto.tamanho" />
+          <input type="text" id="tamanhoProduto" name="tamanhoProduto" placeholder="Tamanho" [(ngModel)]="produto.tamanho" />
         </div>
 
         <div class="grupo-form">
           <label for="corProduto">Cor:</label>
-          <input type="text" id="corProduto" placeholder="Cor do Produto" [(ngModel)]="produto.cor" />
+          <input type="text" id="corProduto" name="corProduto" placeholder="Cor do Produto" [(ngModel)]="produto.cor" />
         </div>
       </div>
     </div>

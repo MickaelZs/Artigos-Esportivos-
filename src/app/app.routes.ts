@@ -8,6 +8,7 @@ import { CadastroUsuario } from './pages/cadastro-usuario/cadastro-usuario';
 import { Categorias } from './pages/categorias/categorias';
 import { HomeAdmin } from './pages/admin/home-admin/home-admin';
 import { CarrinhoCompras } from './pages/carrinho-compras/carrinho-compras';
+import { PerfilUsuario } from './pages/perfil-usuario/perfil-usuario';
 
 export const routes: Routes = [
     {
@@ -46,6 +47,12 @@ export const routes: Routes = [
         path: 'carrinho',
         component: CarrinhoCompras,
         title: 'Carrinho de Compras'
+    },
+
+     {
+        path: 'perfil',
+        component: PerfilUsuario,
+        title: 'Perfil do Usuário'
     },
 
     {
