@@ -27,7 +27,9 @@ export class FormProdutos {
 
   ) { 
 
-     this.produtoId = Number(this.route.snapshot.params['id']);
+     this.produtoId = this.route.snapshot.params['id'];
+     console.log(this.route.snapshot.params)
+     console.log(this.produtoId)
     if (this.produtoId) {
       service.buscarPorId(this.produtoId).subscribe(produto => {
         if (produto) {
